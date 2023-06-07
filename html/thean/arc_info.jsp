@@ -1,10 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="DBPKG.UtilArc"%>
+<%@ page import="DBPKG.Prepare"%>
+
+<%
+String id = request.getParameter("id");
+Connection conn = null;
+
+
+
+%>
 <!doctype html>
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>¥ıæ»∞«√‡</title>
+	<title>ÎçîÏïàÍ±¥Ï∂ï</title>
 	<link rel="stylesheet" type="text/css" href="../../css/thean/arc_info.css" />
 </head>
 <body>
@@ -12,43 +22,122 @@
         <jsp:include page="header.jsp"></jsp:include>
 		<div id = "body">
             <div class = "explain-container">
-                <div class = "explain">
-                    <div class = "title">º≥∞Ë - ¥ÁªÁµø 309 ¥Ÿ∞°±∏¡÷≈√ 'πŸ¥Ÿ∏¶ «∞¿∫ ¡˝'</div>
+            <%
+             
+    try {
+                        conn = UtilArc.getConnection();
+    
+                        PreparedStatement ps = conn.prepareStatement("select * from arc where id="+id+";");
+                       
+                        ResultSet rs = ps.executeQuery();
+    
+                        
+                        if(rs.next()){
+%>
+  <div class = "explain">
+                    <div class = "title"><%=rs.getString("cat")%> - <%=rs.getString("nm")%></div>
                     <div class = "ex-elements">
                         <div class = "ex-element">
-                            <div class = "ex-title">øÎµµ</div>
-                            <div class = "ex-info">¥Ÿ∞°±∏¡÷≈√</div>
+                            <div class = "ex-title">Ïö©ÎèÑ</div>
+                            <div class = "ex-info"><%=rs.getString("work")%></div>
                         </div>
                         <div class = "ex-element">
-                            <div class = "ex-title">¿ßƒ°</div>
-                            <div class = "ex-info">øÔªÍ</div>
+                            <div class = "ex-title">ÏúÑÏπò</div>
+                            <div class = "ex-info"><%=rs.getString("gps")%></div>
                         </div>
                         <div class = "ex-element">
-                            <div class = "ex-title">¥Î¡ˆ∏È¿˚</div>
-                            <div class = "ex-info">999m©˜</div>
+                            <div class = "ex-title">ÎåÄÏßÄÎ©¥Ï†Å</div>
+                            <div class = "ex-info"><%=rs.getString("ground")%>m¬≤</div>
                         </div>
                         <div class = "ex-element">
-                            <div class = "ex-title">ø¨∏È¿˚</div>
-                            <div class = "ex-info">999m©˜</div>
+                            <div class = "ex-title">Ïó∞Î©¥Ï†Å</div>
+                            <div class = "ex-info"><%=rs.getString("grow")%>m¬≤</div>
                         </div>
                         <div class = "ex-element">
-                            <div class = "ex-title">º≥∞Ë</div>
-                            <div class = "ex-info">∞«√‡ªÁªÁπ´º“ «—øÔ</div>
+                            <div class = "ex-title">ÏÑ§Í≥Ñ</div>
+                            <div class = "ex-info"><%=rs.getString("design")%></div>
                         </div>
                         <div class = "ex-element">
-                            <div class = "ex-title">√‘øµ</div>
-                            <div class = "ex-info">πÃµæÓ¡ÿ Ω≈¡ÿΩƒ</div>
+                            <div class = "ex-title">Ï¥¨ÏòÅ</div>
+                            <div class = "ex-info"><%=rs.getString("photo")%></div>
                         </div>
                         <div class = "ex-element">
-                            <div class = "ex-title">±‚≈∏</div>
-                            <div class = "ex-info">«—øÔ º“º”¿∏∑Œ ¡¯«‡«— æ˜π´</div>
+                            <div class = "ex-title">Í∏∞ÌÉÄ</div>
+                            <div class = "ex-info"><%=rs.getString("etc")%></div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class = "img-element">
-                <img src="" class = "arc-img" alt="">
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<%
+                        }
+
+
+                        ps = conn.prepareStatement("select * from arcph where id="+id+";");
+                       
+                        rs = ps.executeQuery();
+    
+
+                        while(rs.next()){
+                            %>
+                            <img src="../../upload_server/thean_resource/<%=rs.getString("ph")%>" class = "arc-img" alt="">
+                            
+                            
+                            
+                            
+                            <%
+
+
+
+                        }
+
+
+
+
+    
+    
+    }catch(Exception e){
+%><%=e%><%
+
+    }
+    
+    
+    
+    
+    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            %>
+              
+          </div>
 		</div>
 	</div>
 </body>

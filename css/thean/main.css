@@ -16,6 +16,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'M';
 }
 
 :root {
@@ -30,11 +31,24 @@ a {
 #header {
 	width: 100%;
 	height: 100vh;
-	background-image: url('../../upload_server/thean_resource/ulsan.png');
-    background-size: cover;
-    background-position: center center;
     position: relative;
 }
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.slide.active {
+    opacity: 1;
+  }
 
 .head-elements {
     width: 100%;
@@ -42,9 +56,8 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
-    position: fixed;
-    z-index: 3;
+    z-index: 100;
+    position: absolute;
 }
 
 .menu-elements {
@@ -76,6 +89,7 @@ a {
     align-items: center;
     padding-left: 15px;
     gap: 12px;
+    z-index: 100;
 }
 
 .logo {
@@ -159,7 +173,6 @@ a {
 .thumb {
     width: 100%;
     height: 100%;
-    background-image: url('../../uploadimg/a.jpg');
     background-size: cover;
     position: relative;
 }
@@ -167,7 +180,7 @@ a {
 .more {
     width: 100%;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     text-decoration: underline;
     font-family: 'B';
 }
@@ -214,5 +227,21 @@ a {
         width: 90%;
         margin: 40px auto;
         margin-bottom: 40px;
+    }
+
+    .more {
+        font-size: 12px;
+    }
+
+    .photos {
+        height: 180px;
+    }
+
+    .thumb-title {
+        font-size: 18px;
+    }
+
+    .thumb-year {
+        font-size: 14px;
     }
 }

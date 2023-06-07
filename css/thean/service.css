@@ -16,6 +16,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'M';
 }
 
 :root {
@@ -62,20 +63,32 @@ a {
 
 .photo-container {
     display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 100px;
-    padding-top: 40px;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
 }
 
 .photo-element {
-    width: 26%;
+    width: 30%;
 }
 
 .photo-title {
+    padding-top: 80px;
+    width: 90%;
+    margin: 0 auto;
     font-size: 24px;
     font-family: 'B';
     border-bottom: 1px solid #aaa;
+}
+
+.title {
+    font-family: 'B';
+    font-size: 24px;
+}
+
+.info {
+    margin-top: 30px;
+    word-break: keep-all;
 }
 
 .photo-list {
@@ -86,9 +99,8 @@ a {
     word-break: keep-all;
 }
 
-.photo1 {
+.photo {
     width: 100%;
-    background-image: url('../../upload_server/thean_resource/photo1.png');
     background-size: cover;
     background-position: center center;
     height: 400px;
@@ -98,38 +110,6 @@ a {
 .history-element {
     display: flex;
     margin-bottom: 30px;
-}
-
-.year {
-    width: 40px;
-    text-align: center;
-    word-break: keep-all;
-    margin-right: 30px;
-    font-family: 'B';
-}
-
-.info {
-    color: #999;
-}
-
-.employee-element {
-    display: flex;
-    margin-bottom: 10px;
-    align-items: center;
-}
-
-.major {
-    width: 60px;
-    font-family: 'B';
-}
-
-.major-2 {
-    width: 80px;
-    font-family: 'B';
-}
-
-.name {
-    color: #777;
 }
 
 @media screen and (max-width: 768px) {

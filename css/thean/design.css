@@ -1,0 +1,269 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../font/M.ttf');
+}
+
+@font-face {
+    font-family: 'L';
+    src: url('../../font/L.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'M';
+}
+
+:root {
+    --red: rgb(210, 46, 46);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.head-elements {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    position: fixed;
+    z-index: 3;
+}
+
+.menu-elements {
+    display: flex;
+    gap: 50px;
+    font-family: 'B';
+    margin-right: 30px;
+}
+
+#body {
+	width: 100%;
+	background-color: #fff;
+    padding-top: 40px;
+}
+
+.text_option {
+	color: var(--red);
+}
+
+.logo {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.design-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.info-container {
+    margin-top: 40px;
+}
+
+.photo-element {
+    width: 30%;
+}
+
+.title {
+    padding-top: 80px;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 24px;
+    font-family: 'B';
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.w {
+    font-size: 11px;
+    font-family: 'M';
+}
+
+.circles {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.circle {
+    border: 3px solid var(--red);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.line {
+    width: 90%;
+    border-bottom: 1px solid #aaa;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.info-title {
+    font-size: 24px;
+    font-family: 'B';
+}
+
+.info {
+    margin-top: 30px;
+    word-break: keep-all;
+}
+
+.photo-container {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.photos {
+    width: 18%;
+    margin: 1%;
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+    margin-bottom: 40px;
+    background-color: #eee;
+    position: relative;
+}
+
+.history-element {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.thumb-info {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.1s ease-in-out;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.thumb-title {
+    word-break: keep-all;
+    width: 84%;
+    color: #fff;
+    font-family: 'B';
+    text-align: center;
+    font-size: 24px;
+}
+
+.thumb-year {
+    color: #fff;
+    font-family: 'B';
+    text-align: center;
+    font-size: 22px;
+}
+
+.thumb-info:hover {
+    opacity: 1;
+}
+
+.thumb {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        height: 300px;
+    }
+
+    .head-elements {
+        height: 60px;
+    } 
+
+    .menu-elements {
+        gap: 24px;
+    }
+
+    .text_option {
+        color: var(--red);
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .info-title {
+        font-size: 20px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
+    
+    .circle {
+        width: 70px;
+        height: 70px;
+        font-size: 12px;
+    }
+
+    .circles {
+        gap: 8px;
+    }
+
+    .photos {
+        width: 48%;
+        height: 250px;
+    }
+
+    .design-container {
+        display: block;
+    }
+
+    .title {
+        display: block;
+    }
+
+    .w {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1270px) and (min-width: 769px) {
+    .design-container {
+        display: block;
+    }
+
+    .photos {
+        width: 31%;
+    }
+}

@@ -1,144 +1,81 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%> 
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
+<%@ page import="DBPKG.UtilArc"%>
+<%@ page import="DBPKG.Prepare"%>
+    
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>about</title>
-        <link rel="stylesheet" type="text/css" href="../../css/thean/about.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/thean/design.css" />
     </head>
     <body>
         <div id = "main">
             <jsp:include page="header.jsp"></jsp:include>
-        </div>
-        <div id = "body">
-            <div class = "photo-container">
-                <div class = "photo-element">
-                    <div class = "photo-title">About 'The-An'</div>
-                    <div class = "photo-list">
-                        <div class = "photo1"></div>
-                        ¿ì¸®´Â °ÇÃà¿¡¼­ °¡Àå Áß¿äÇÑ°ÍÀÌ ¹«¾ùÀÎÁö¿¡ ´ëÇÑ °í¹ÎÀ» ÇØ¾ßÇÏ´Â »ç¶÷µéÀÌ´Ù.<br>
-                        ¼ö ³â°£ÀÇ ¼³°è¿Í µðÀÚÀÎ, °¨¸®¸¦ ÅëÇØ ¾ò¾î³½ °á°ú´Â °á±¹ ¡®Æí¾ÈÇÔ¡¯ ÀÌ¶ó´Â°Í.<br>
-                        °¡Àå ´Ü¼øÇÏ°íµµ ¼ºÀÇ°¡ ¾ø¾îº¸ÀÌ´Â ÀÌ ¼¼±ÛÀÚ°¡, °ÇÃà¿¡¼­ ±×·¸°Ôµµ ¾î·Æ´Ù.<br>
-                        »ç¶÷À» ´ú ¿òÁ÷ÀÌµµ·Ï ¸¸µå´Â 1Â÷¿øÀûÀÎ Æí¾ÈÇÔÀÌ ¾Æ´Ï¶ó, »ç¶÷¸¶´Ù Á¦°¢±â ´Ù¸¥
-                        Æí¾ÈÇÔ¿¡ ´ëÇÑ ±âÁØ°ú Á¤ÀÇ¸¦ ¸ÂÃß´Â °íÂ÷¿øÀûÀÎ Æí¾ÈÇÔÀ» ÀÌ¾ß±â ÇÏ´Â°ÍÀÌ´Ù.<br>
-                        <br>
-                        ¿ì¸®´Â °ÇÃà¿¡¼­ <b>¡®Æí¾ÈÇÑ °ø°£¡¯</b>¿¡ ´ëÇÑ »õ·Î¿î Á¤ÀÇ°¡ ÇÊ¿äÇÔÀ» ÀÎÁöÇÏ°í, <b>¡®Æí¾ÈÇÑ °ø°£¡¯</b>¿¡ ´ëÇÑ
-                        Å½±¸¸¦ Àû±ØÀûÀ¸·Î ÇÏ°íÀÚ <b>¡®Æí¾ÈÇÒ äÌ¡¯</b>ÀÚ¿Í ÇÔ²² °ø°£À¸·Î¼­ÀÇ ±ÔÁ¤À» À§ÇÑ <b>¡®´ë¸í»ç THE¡¯</b>¸¦
-                        ÇÕÇÏ¿© ¸¸µé¾î³½ ¸íÄªÀÌ ¹Ù·Î <b>¡®THE + äÌ¡¯ = ´õ¾È</b> ÀÌ´Ù.<br> 
-                        <br>
-                        ¿ì¸®´Â °ø°£À» ±â¼úÀÌ¾Æ´Ñ, ÇÐ¹®À¸·Î Ç®°íÀÚÇÑ´Ù.
-                    </div>
-                </div>
-                <div class = "photo-element">
-                    <div class = "photo-title">History</div>
-                    <div class = "photo-list">
-                        <div class = "history-elements">
-                            <div class = "history-element">
-                                <div class = "year">2015 ~ 2018</div>
-                                <div class = "info">
-                                    M,H °ÇÃà»ç»ç¹«¼Ò ¼Ò¼ÓÀÛ¾÷<br>
-                                    Çö»ó¼³°è ´ç¼±(5È¸) 2µî(3È¸) 3µî(1È¸)<br>
-                                    °ü±Þ½ÅÃß°ø»ç(6È¸)
-                                </div>
-                            </div>
-                            <div class = "history-element">
-                                <div class = "year">2019</div>
-                                <div class = "info">
-                                    ´õ¾È°ÇÃà ¼³¸³<br>
-                                    ·¯½Ã¾Æ Ä¯Â÷Æ®Ä« ÇÊ·¿°øÀå ´ë¼ö¼± °ø»ç<br>
-                                    º£Æ®³² ÇÏ³ëÀÌ ÇÑÀÎ½Ä´ç ÀÎÅ×¸®¾î °ø»ç<br>
-                                    LA ÇÑ½ÄÇÁ·£Â÷ÀÌÁî ÀÎÅ×¸®¾î °ø»ç
-                                </div>
-                            </div>
-                            <div class = "history-element">
-                                <div class = "year">2020</div>
-                                <div class = "info">
-                                    S°ÇÃà»ç»ç¹«¼Ò ¼Ò¼ÓÀÛ¾÷<br>
-                                    Á¾·ÎÀÏ´ë µµ½ÃÀç»ý<br>
-                                    °­µ¿ ¾î¸°ÀÌ¼¾ÅÍ °ü±ÞÀÎÅ×¸®¾î<br>
-                                    Á¾·Î °øµ¿ÁÖÅÃ ´ë¼ö¼±°ø»ç
-                                </div>
-                            </div>
-                            <div class = "history-element">
-                                <div class = "year">2021</div>
-                                <div class = "info">
-                                    Æ÷½ºÄÚ±×·ì ´Þ¼­±º ¸ð‰RÇÏ¿ì½º ÀÎÅ×¸®¾î ¼³°è<br>
-                                    ·Ôµ¥¹éÈ­Á¡ ÀÇ¿ÕÁ¡ ÁÖ·ùÄÚ³Ê ÀÎÅ×¸®¾î ¼³°è<br>
-                                    µî ´Ù¼ö
-                                </div>
-                            </div>
-                            <div class = "history-element">
-                                <div class = "year">2022</div>
-                                <div class = "info">
-                                    ´õ¾È°ÇÃà È®ÀåÀÌÀü<br>
-                                    ¾Ë½ºÄù¾î ±×·ì °ÇÃà¾÷¹«Áö¿ø (ÁøÇàÁß)<br>
-                                    µµ½Ã°æ¿µ¿¬±¸¿ø °ü°ø¼­ ±Ô¸ð°ËÅä(ÁøÇàÁß)<br>
-                                    ¸ñµ¿ ¼¼½Å±³È¸ ½ÇÃø<br>
-                                    µî´Ù¼ö 
-                                </div>
-                            </div>
-                            <div class = "history-element">
-                                <div class = "year">2023</div>
-                                <div class = "info">
-                                    ½Å¾È°íÅÃ ´ë¼ö¼±<br>
-                                    Æ÷½ºÄÚ Æ÷Ç×»ç¿Á ÀÎÅ×¸®¾î °ø»ç<br>
-                                    ¿¡ÄÚÇÁ·Îºñ¿¥ Æ÷Ç×º»»ç ÀÎÅ×¸®¾î °ø»ç<br>
-                                    ¹æÀÌµ¿ ¿À·Î½Ã¿¡È£ÅÚ ´ë¼ö¼±°ø»ç<br>
-                                    ÇØ¿î´ë ÇÏ¹öÅ¸¿î¸ó½ºÅÍ ÀÎÅ×¸®¾î °ø»ç<br>
-                                    ¾çÆò ÆÄ¶ó¸¶¿îÆ® ´ÜÁö°ø»ç<br>
-                                    ÇÑ»ù 3,4°øÀå ÇöÀå½ÇÃø 
-                                </div>
-                            </div>
+            <div id = "body">
+                <div class = "title">ì„¤ê³„</div>
+                <div class = "design-container">
+                    <div class = "info-container">
+                        <div class = "info-title">ë”ì•ˆê±´ì¶•ì€ ì„¤ê³„ë¥¼ í•©ë‹ˆë‹¤</div>
+                        <div class = "info">
+                            ì‹œê³µê°€ëŠ¥í•œ ì„¤ê³„ë¡œ í’€ì–´ë“œë¦½ë‹ˆë‹¤<br>
+                            ì„¤ê³„ê°€ í•„ìˆ˜ì¸ ëŒ€í˜•/ê´€ê³µì„œ í˜„ìž¥, í˜„ìž¥ê´€ë¦¬ë¡œ ìŠ¤íŠ¸ë ˆìŠ¤ ë°›ëŠ” ì†Œê·œëª¨ ì¸í…Œë¦¬ì–´í˜„ìž¥ ë“±<br>
+                            ë¹ ë¥´ê³  ì •í™•í•˜ê²Œ, ê³µì‚¬ê°€ëŠ¥í•œ ë””í…Œì¼ì„ ì§šì–´ì„œ í’€ì–´ë“œë¦½ë‹ˆë‹¤.<br>
+                            <br>
+                            í•„ìš”í•˜ë‹¤ë©´ ë””ìžì¸ê¹Œì§€,<br>
+                            í•„ìš”í•˜ë‹¤ë©´ ë¸Œëžœë”©ê¹Œì§€,<br>
+                            í•„ìš”í•˜ë‹¤ë©´ ëª¨ë¸ë§ê¹Œì§€.
                         </div>
                     </div>
+                    <div class = "circles">
+                        <div class = "circle">ê±´ì¶•<br>ì„¤ê³„</div>
+                        <div class = "circle">ì¸í…Œë¦¬ì–´<br>ì„¤ê³„</div>
+                        <div class = "circle">ê³µì‚¬<br>ë„ì„œ</div>
+                        <div class = "circle">ë””ìžì¸</div>
+                        <div class = "circle">ë¸Œëžœë”©</div>
+                        <div class = "circle">í˜„ìž¥<br>ê°ë¦¬</div>
+                    </div>
                 </div>
-                    <div class = "photo-element">
-                        <div class = "photo-title">Organization</div>
-                        <div class = "photo-list">
+                <div class = "line"></div>
+                <div class = "photo-container">
+                    <%
+                    Connection conn = null;
+    
+    try {
+                        conn = UtilArc.getConnection();
+    
+                        PreparedStatement ps = conn.prepareStatement("select * from arc where cat='ì„¤ê³„'");
+                       
+                        ResultSet rs = ps.executeQuery();
+    
+                        while(rs.next()){
+                            %>
+                      <div class = "photos">
+                            <a href = "arc_info.jsp?id=<%=rs.getString("id")%>" class = "thumb-info">
+                                <div class = "thumb-title"><%=rs.getString("nm")%></div>
+                                <div class = "thumb-year"><%=rs.getString("year")%></div>
+                            </a>
+                            <div class = "thumb" style = "background-image: url('../../upload_server/thean_resource/<%=rs.getString("phm")%>');"></div>
+                        </div>      
                             
-                        </div>
-                        <div class = "photo-title">People (Header)</div>
-                        <div class = "photo-list">
-                            <div class = "employee-element">
-                                <div class = "major">C.E.O</div>
-                                <div class = "name">An Yong jin (Cheif)</div>
-                            </div>
-                            <div class = "employee-element">
-                                <div class = "major">C.F.O</div>
-                                <div class = "name">Byeon Eun yhe (Accountant)</div>
-                            </div>
-                            <div class = "employee-element">
-                                <div class = "major">C.O.O</div>
-                                <div class = "name">Kim Sun min (Interior Team Leader)</div>
-                            </div>
-                            <div class = "employee-element">
-                                <div class = "major">C.T.O</div>
-                                <div class = "name">Shin Tae yang (Web Development Leader)</div>
-                            </div>
-                        </div>
-                        <div class = "photo-title">Contact</div>
-                        <div class = "photo-list">
-                            <div class = "employee-element">
-                                <div class = "major-2">(00165)</div>
-                                <div class = "name">¼­¿ï½Ã °­ºÏ±¸ µµºÀ·Î 100, 4Ãþ</div>
-                            </div>
-                            <div class = "employee-element">
-                                <div class = "major-2">´ëÇ¥¸ÞÀÏ</div>
-                                <div class = "name">the_an100@naver.com</div>
-                            </div>
-                            <div class = "employee-element">
-                                <div class = "major-2">Tel</div>
-                                <div class = "name">02.980.2254</div>
-                            </div>
-                            <div class = "employee-element">
-                                <div class = "major-2">°í°´¼¾ÅÍ</div>
-                            </div>
-                        </div>
-                    </div>
+                            
+                            
+                            <%
+
+
+                        }
+                        }catch(Exception e){
+
+                        }
+
+
+
+                        %>
+                    
                 </div>
             </div>
-		</div>
+        </div>
     </body>
 </html>

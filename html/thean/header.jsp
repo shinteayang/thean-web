@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <div class = "head-elements">
     <a href = "main.jsp" class = "logo">
         <img src="../../mainlogo/thean logo.png" class = "logo">
@@ -6,8 +6,8 @@
     <div class = "menu-elements">
         <a href = "about.jsp" class = "text_option">ABOUT</a>
         <a href = "service.jsp" class = "text_option">SERVICE</a> 
-        <a href = "design.jsp" class = "text_option">¼³°è</a>
-        <a href = "actual.jsp" class = "text_option">½ÇÃø</a> 
-        <a href = "completion.jsp" class = "text_option">ÁØ°ø</a> 
+        <a href = "design.jsp" class = "text_option">ì„¤ê³„</a>
+        <a href = "actual.jsp" class = "text_option">ì‹¤ì¸¡</a> 
+        <a href = "completion.jsp" class = "text_option">ì¤€ê³µ</a> 
     </div>
 </div>
