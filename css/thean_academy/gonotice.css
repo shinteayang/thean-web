@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../font/M.ttf');
+}
+
+@font-face {
+    font-family: 'L';
+    src: url('../../font/L.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.note-editor {
+    margin-top: 2vw;
+}
+
+.note-editing-area {
+    height: 24vw;
+}
+
+.body {
+    width: 64vw;
+    min-height: 94vh;
+    padding-top: 7vw;
+    padding-bottom: 4vw;
+    margin: 0 auto;
+}
+
+.non-custm-container {
+    margin-bottom: 2vw;
+}
+
+.non-custm {
+    font-size: 1.6em;
+    font-family: 'B';
+    margin-bottom: 20px;
+}
+
+#nm {
+    width: 100%;
+    height: 70px;
+    font-size: 2.4em;
+    font-family: 'B';
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#con {
+    width: 200px;
+    height: 40px;
+    font-size: 1em;
+    font-family: 'M';
+    margin-right: 20px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#sp {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    resize: none;
+    width: 100%;
+    height: 50vh;
+    margin-top: 1vw;
+    font-size: 1.2em;
+}
+
+.warning {
+    color: red;
+    margin-top: 1vw;
+    font-size: 16px;
+}
+
+.update-title {
+    font-size: 3vw;
+    font-family: 'B';
+    margin-bottom: 2vw;
+}
+
+.submit-btn {
+    width: 200px;
+    height: 60px;
+    display: block;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: none;
+    font-size: 18px;
+    margin-top: 2vw;
+}
+
+input:focus {
+    outline: none;
+}
+
+input::placeholder {
+    font-family: 'M';
+    color: #aaa;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    font-family: 'M';
+    color: #aaa;
+}
+
+.yn {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.y {
+    display: flex;
+    gap: 8px;
+    align-items: center; 
+}
+
+.ynlabel {
+    font-size: 16px;
+    margin: 0 !important;
+    font-weight: 100;
+}

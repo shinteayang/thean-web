@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../font/M.ttf');
+}
+
+@font-face {
+    font-family: 'L';
+    src: url('../../font/L.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.main {
+    padding-top: 60px;
+    margin-bottom: 5vw;
+}
+
+.content {
+    width: 72vw;
+    margin: 0 auto;
+    margin-top: 4vw;
+}
+
+.title {
+    font-size: 2vw;
+    font-family: 'B';
+}
+
+.info-wrap {
+    margin-top: 2vw;
+    padding-bottom: 0.8vw;
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.info {
+    display: flex;
+    margin-right: 3vw;
+    align-items: center;
+}
+
+.b {
+    font-family: 'B';
+    margin-right: 1.2vw;
+}
+
+.w {
+    font-family: 'M';
+    margin-right: 1.2vw;
+}
+
+.te {
+    margin-top: 2vw;
+    width: 100%;
+    font-family: 'M';
+    font-size: 0.9vw;
+    word-break: keep-all;
+}
+
+.te:focus {
+    outline: none;
+}
+
+.back-btn {
+    width: 180px;
+    height: 50px;
+    display: block;
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'M';
+}

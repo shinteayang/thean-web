@@ -1,0 +1,105 @@
+@import url('//db.onlinewebfonts.com/c/67680f2eb947c5cbd58b40961b4a61e9?family=Apple+SD+Gothic+Neo');
+@font-face {font-family: "Apple SD Gothic Neo"; src: url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.eot"); src: url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.woff") format("woff"), url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/67680f2eb947c5cbd58b40961b4a61e9.svg#Apple SD Gothic Neo") format("svg"); }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+}
+
+#main{
+	width:100%;
+	height:100%;
+
+	
+	
+}
+
+
+
+
+
+#body_main{
+	width:100%;
+	height:100%;
+	
+	text-align:center;
+	
+	
+}
+
+
+
+#main_left{
+	width:50%;
+	height:100%;
+	
+	float:left;
+	background-image: url('../mainlogo/thean logo.png');
+	  background-repeat : no-repeat;
+	  background-position: center;
+        background-size : 300px 300px;
+        background-color:#708090;
+        text-align:center;
+        font-size:70px;
+         text-decoration: none; /* 링크의 밑줄 제거 */
+  color: black;
+  font-family: 'Dongle', sans-serif;
+  
+  
+	
+}
+#main_right{
+	width:50%;
+	height:100%;
+	float:left;
+	
+	background-image: url('../mainlogo/thean academy logo.jpg');
+	 background-repeat : no-repeat;
+      background-position: center;
+        background-size : 300px 300px;
+         text-align:center;
+        text-decoration: none; /* 링크의 밑줄 제거 */
+        font-size:70px;
+  color: black;
+  font-family: 'Dongle', sans-serif;
+
+	
+}
+
+#main_left:hover{
+	width:50%;
+	height:100%;
+	
+	float:left;
+	background-image: url('../mainlogo/thean logo.png');
+	  background-repeat : no-repeat;
+	  background-position: center;
+        background-size : 300px 300px;
+       opacity: 0.6;
+	
+}
+
+#main_right:hover{
+	width:50%;
+	height:100%;
+	
+	float:left;
+	background-image: url('../mainlogo/thean academy logo.jpg');
+	  background-repeat : no-repeat;
+	  background-position: center;
+        background-size : 300px 300px;
+        opacity: 0.6;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

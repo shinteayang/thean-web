@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../font/M.ttf');
+}
+
+#main {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 45%;
+    margin-bottom: 3vw;
+    background-color: #fff;
+    padding: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'M';
+}
+
+.cert-body {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    background-image: url("../../img/background_login.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.body {
+    width: 100%;
+    height: 1400px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.title-container {
+	text-align: center;
+	width: 100%;
+	margin-bottom: 3vw;
+}
+
+.proced {
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	justify-content: space-between;
+	color: #cccccc;
+}
+
+.active {
+	color: black;
+}
+
+.terms {
+	margin-top: 3vw;
+}
+
+.term {
+	margin-top: 4vw;
+}
+
+.term-box {
+	width: 100%;
+	height: 150px;
+	border: 1px solid lightgray;
+    resize: none;
+}
+
+.check {
+	margin-top: 1vw;
+	float: right;
+}
+
+.btns {
+	margin: 0 auto;
+	margin-top: 4vw;
+	display: flex;
+	justify-content: center;
+}
+
+.btn1 {
+	width: 160px;
+	height: 50px;
+	border: none;
+	background-color: #000;
+	color: #fff;
+	font-size: 1.1em;
+	border-radius: 10px;
+    margin: 5px;
+}
+
+.iden-container {
+	margin-top: 3vw;
+	border-top: 2px solid black;
+}
+
+.gender {
+    margin-right: 10px;
+}
+
+.iden {
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid lightgray;
+	align-items: center;
+	margin: 0;
+}
+
+.iden-title {
+	width: 15%;
+	height: 100%;
+	padding: 1vw;
+	background-color: #eee;
+}
+
+.addr-title {
+	width: 15%;
+	height: 100%;
+	padding: 1vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+	background-color: #eee;
+}
+
+.input-here {
+    padding-left: 1vw;
+	width: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.iden input {
+    padding: 5px;
+    border: none;
+    background-color: #eee;
+    margin-right: 6px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sub-btn {
+    margin-right: 6px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #244664;
+    color: #fff;
+}
+
+.tel {
+	width: 6%;
+}
+
+.address {
+	width: 60%;
+}
+
+

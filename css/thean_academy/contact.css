@@ -1,0 +1,66 @@
+.contact-container {
+    bottom: 0;
+    right: 0;
+    margin-right: 40px;
+    margin-bottom: 78px;
+    position: fixed;
+    z-index: 10002;
+}
+
+.chat-container {
+    background: #70a0c4;
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 5px 30px 8px rgba(35, 69, 116, 0.338);
+}
+
+.chat-messages {
+    padding: 10px;
+    height: 500px;
+    overflow-y: scroll;
+    background: #cde4f5;
+}
+
+.chat-messages::-webkit-scrollbar {
+    display: none;
+}
+
+.chat-message {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.sent {
+    background: #ccc;
+    color: #000;
+    text-align: right;
+}
+
+.received {
+    background: #ffd152;
+    color: #000000;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.kakao {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background-color: #244664;
+    background-image: url('../../img/chat.png');
+    background-position: center center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+}
+
+.t {
+    font-size: 18px;
+    font-family: 'B';
+}
+
+.s {
+    font-size: 16px;
+}

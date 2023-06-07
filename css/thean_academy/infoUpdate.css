@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../font/M.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #244664;
+    text-decoration: underline;
+}
+
+.main {
+    width: 65vw;
+    padding-top: 3vw;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.title {
+    margin-top: 4vw;
+    font-size: 26px;
+    font-family: 'B';
+}
+
+.iden-container {
+	margin-top: 2vw;
+	border-top: 2px solid black;
+}
+
+.gender {
+    margin-right: 10px;
+}
+
+.btns {
+	margin: 0 auto;
+	margin-top: 4vw;
+	display: flex;
+	justify-content: center;
+}
+
+.btn1 {
+	width: 160px;
+	height: 50px;
+	border: none;
+	background-color: #000;
+	color: #fff;
+	font-size: 1.1em;
+	border-radius: 10px;
+    margin: 5px;
+}
+
+.iden {
+	width: 100%;
+	display: flex;
+	border-bottom: 1px solid lightgray;
+	align-items: center;
+	margin: 0;
+}
+
+.iden-title {
+	width: 15%;
+	height: 100%;
+	padding: 1vw;
+    font-size: 16px;
+	background-color: #eee;
+}
+
+.input-here {
+    padding-left: 1vw;
+	width: 85%;
+    display: flex;
+    align-items: center;
+}
+
+.iden input {
+    padding: 5px;
+    border: none;
+    background-color: #eee;
+    margin-right: 6px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sub-btn {
+    margin-right: 6px;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #244664;
+    color: #fff;
+}
+
+.tel {
+	width: 6%;
+}
+
+.address {
+	width: 60%;
+}

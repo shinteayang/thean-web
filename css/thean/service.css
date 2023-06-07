@@ -1,0 +1,179 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../font/M.ttf');
+}
+
+@font-face {
+    font-family: 'L';
+    src: url('../../font/L.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --red: rgb(210, 46, 46);
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.head-elements {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    position: fixed;
+    z-index: 3;
+}
+
+.menu-elements {
+    display: flex;
+    gap: 50px;
+    font-family: 'B';
+    margin-right: 30px;
+}
+
+#body {
+	width: 100%;
+	background-color: #fff;
+    padding-top: 40px;
+}
+
+.text_option {
+	color: var(--red);
+}
+
+.logo {
+    width: 50px;
+    margin-left: 10px;
+}
+
+.photo-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 100px;
+    padding-top: 40px;
+}
+
+.photo-element {
+    width: 26%;
+}
+
+.photo-title {
+    font-size: 24px;
+    font-family: 'B';
+    border-bottom: 1px solid #aaa;
+}
+
+.photo-list {
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    word-break: keep-all;
+}
+
+.photo1 {
+    width: 100%;
+    background-image: url('../../upload_server/thean_resource/photo1.png');
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    margin-bottom: 40px;
+}
+
+.history-element {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.year {
+    width: 40px;
+    text-align: center;
+    word-break: keep-all;
+    margin-right: 30px;
+    font-family: 'B';
+}
+
+.info {
+    color: #999;
+}
+
+.employee-element {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.major {
+    width: 60px;
+    font-family: 'B';
+}
+
+.major-2 {
+    width: 80px;
+    font-family: 'B';
+}
+
+.name {
+    color: #777;
+}
+
+@media screen and (max-width: 768px) {
+    #header {
+        height: 300px;
+    }
+
+    .head-elements {
+        height: 60px;
+    } 
+
+    .menu-elements {
+        gap: 24px;
+    }
+
+    .text_option {
+        color: var(--red);
+        font-size: 12px;
+    }
+
+    .logo {
+        width: 30px;
+    }
+
+    .photo-container {
+        display: inline;
+    }
+
+    .photo-element {
+        width: 90%;
+        margin: 40px auto;
+        margin-bottom: 40px;
+    }
+
+    .photo1 {
+        height: 300px;
+        background-position: center center;
+    }
+
+    .photo-list {
+        font-size: 14px;
+    }
+
+    .history-element {
+        font-size: 14px;
+    }
+}

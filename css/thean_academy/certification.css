@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'c';
+    src: url('../../font/chosun.TTF');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'c';
+    font-size: 1.2em;
+}
+
+.main {
+    width: 100%;
+    background: #fff;
+    margin-top: 60px;
+}
+
+.wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.num {
+    font-size: 1em;
+}
+
+.title {
+    font-size: 2em;
+    text-align: center;
+    margin: 80px;
+}
+
+.info {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 60px;
+    font-size: 0.8em;
+}
+
+.content {
+    width: 100%;
+    font-size: 1.1em;
+    word-break: keep-all;
+    line-height: 1.5em;
+}
+
+.date {
+    text-align: center;
+    margin: 80px;
+}
+
+.teacher {
+    text-align: center;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+}
+
+.stamp {
+    width: 120px;
+    position: relative;
+    float: right;
+}

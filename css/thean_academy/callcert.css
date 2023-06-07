@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../font/M.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'M', sans-serif;
+}
+
+#main {
+	width: 100%;
+    height: 100%;
+}
+
+#body {
+	width: 100%;
+	margin-bottom: 10vw;
+    padding-top: 60px;
+}
+  
+#video-list {
+	width: 72vw;
+	display: flex;
+    margin: 0 auto;
+    padding-top: 5vw;
+	flex-wrap: wrap;
+	gap: 1% 1%;
+}
+
+.link {
+    width: 16vw;
+    height: 16vw;
+    margin-top: 50px;
+    list-style: none;
+    text-decoration: none;
+}
+
+.video-content {
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+    z-index: 99;
+    display: flex;
+    border-radius: 1vw;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(33, 29, 34, 0.6);
+    backdrop-filter: saturate(.3);
+}
+
+.thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: 102% 102%;
+    background-position: center center;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0px 3px 20px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 1vw;
+}
+
+.video-content:hover ~ .thumb {
+    background-size: 130% 130%;
+}
+
+.difficulty-price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.difficulty-info {
+    color: #fff;
+    padding: 0.8vw;
+}
+
+.price-info {
+    padding: 0.8vw;
+}
+
+.designer {
+    font-size: 1vw;
+    color: #fff;
+}
+
+.price {
+    color: #fff;
+}
+
+.day {
+    color: #fff;
+    font-family: 'M';
+}
+
+.category {
+    font-size: 2vw;
+    font-weight: bolder;
+    margin-top: 2vw;
+}
+
+.title {
+    color: #fff;
+    font-size: 1.6vw;
+    margin: 0 auto;
+    width: 84%;
+    text-align: center;
+    word-break: keep-all;
+    font-family: 'B';
+}
+
+.designer-info {
+    margin-top: 1vw;
+    text-align: center;
+}
+
+.name {
+    font-size: 1vw;
+}
+
+.photoImage {
+	width: 100px;
+	height: 100px;
+}
+
+.video-titlea {
+    font-size: 40px;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1px;
+    font-family: 'B';
+}
+
+.uping {
+	width: 300px;
+	height: 300px;
+}
+
+
