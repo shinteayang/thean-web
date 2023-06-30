@@ -9,18 +9,18 @@
 	<div class = "header-container">
         <div class="header">
             <a class = "logo-form" href="../index/main.jsp">
-                <img src="../../../mainlogo/thean-navy.png" alt="" class="logo">
-                <div class = "aca-title">
-                    <div style = "font-size: 18px; font-family: 'B';">더안건축학원</div>
-                    <div style = "font-size: 13px;">The-an Academy</div>
-                </div>
+                <img src="../../../img/thean_main.png" alt="" class="logo">
+                <%-- <div class = "aca-title">
+                    <div style = "font-size: 14px; font-family: 'B';">더안건축학원</div>
+                    <div style = "font-size: 10px;">The-an Academy</div>
+                </div> --%>
             </a>
             <a href="../lecture/lectures.jsp">강의실</a> <a href="../lecture/education.jsp?tec=all&pg=0">학습지원</a>
         </div>
         <div class="header">
             <a href="../notice/introduce.jsp">학원소개</a>
             <a href="../notice/itnotice.jsp?pg=0">공지사항</a> <a href="../notice/notice.jsp?pg=0&se=all">문의하기</a>
-            <div style = "font-size: 18px;">
+            <div style = "font-size: 16px;">
                 <%
                     if(session == null || session.getAttribute("name")==null) {
                         %><a href="../login/login.jsp?id=1">Login</a> / <a href="../user/agreement.jsp">Join</a><%

@@ -136,7 +136,7 @@ iframe {
 }
 
 .n-title {
-    font-size: 26px;
+    font-size: 20px;
     font-family: 'B';
     margin-bottom: 0.6vw;
 }
@@ -154,7 +154,7 @@ iframe {
 }
 
 .notice-content {
-    font-size: 16px;
+    font-size: 14px;
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
@@ -212,6 +212,7 @@ iframe {
 
 .difficulty-info {
     color: #fff;
+    font-size: 12px;
     padding: 0.6vw;
 }
 
@@ -220,12 +221,13 @@ iframe {
 }
 
 .designer {
-    font-size: 1vw;
+    font-size: 14px;
     color: #fff;
 }
 
 .price {
     color: #fff;
+    font-size: 12px;
 }
 
 .day {
@@ -241,7 +243,7 @@ iframe {
 
 .title {
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     margin: 0 auto;
     width: 84%;
     text-align: center;
@@ -255,7 +257,7 @@ iframe {
 }
 
 .name {
-    font-size: 1vw;
+    font-size: 14px;
 }
 
 .photoImage {
@@ -264,7 +266,7 @@ iframe {
 }
 
 .video-titlea {
-    font-size: 26px;
+    font-size: 20px;
     width: 15%;
     height: 40px;
     margin-bottom: 1px;

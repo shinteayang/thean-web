@@ -44,6 +44,16 @@ a {
     height: 100%;
     background-size: cover;
     background-position: center center;
+    text-align: right;
+}
+
+.int {
+    position: absolute;
+    margin: 40px;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    text-shadow: 0 3px 10px 8px rgba(0, 0, 0, 0.3);
 }
 
 .slide.active {

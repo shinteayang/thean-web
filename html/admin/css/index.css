@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'B';
+    src: url('../../../font/B.ttf');
+}
+
+@font-face {
+    font-family: 'M';
+    src: url('../../../font/M.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    width: 100%;
+}
+
+.main-container {
+    width: 85%;
+    padding-left: 15%;
+    background: #ffffff;
+    height: 2000px;
+}
+
+.main-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    padding-top:40px;
+}
+
+.box {
+    height: 200px;
+    margin: 20px;
+    background: #fff;
+    box-shadow: 0 4px 30px 10px rgba(56, 104, 160, 0.2);
+    border-radius: 20px;
+}
+
+.box-elements {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.box-title {
+    font-family: 'B';
+    font-size: 24px;
+}

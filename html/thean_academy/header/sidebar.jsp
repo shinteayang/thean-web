@@ -40,7 +40,7 @@
                                 <div><%=point%>원</div>
                             </div>
                             <div> 
-                                <%if(opa >= 5) { %><a href="../../admin/index.jsp">관리자페이지</a><% }%>
+                                <%if(opa >= 5) { %><a href="../../admin/html/index.jsp">관리자페이지</a><% }%>
                             </div>
                         </div>
                     </div>

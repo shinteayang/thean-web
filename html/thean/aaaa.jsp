@@ -4,17 +4,7 @@
 <%@ page import="DBPKG.UtilArc"%>
 <%@ page import="DBPKG.Prepare"%>
     <%
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+       
     
     %>
 <!doctype html>

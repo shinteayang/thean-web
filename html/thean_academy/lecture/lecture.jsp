@@ -337,7 +337,7 @@ try {
                     </div>
                     <div class="menu-btn-container">
                        <a href="../../../upload_server/category/cover/<%=fl %>" class="menu-btn" style="height:5%;width:69%;" download>파일 다운로드</a>
-                       <a href="../lecture/education.jsp?tec=all&pg=0" class="menu-btn" style="height:5%;width:69%;" download>강의 질문하기</a>
+                       <a href="../lecture/education.jsp?tec=all&pg=0" class="menu-btn" style="height:5%;width:69%;">강의 질문하기</a>
                     </div>
                 </div>
                 <div class="video-wrap"></div>
@@ -359,7 +359,7 @@ try {
                             ys = rsct.getString("ys");
                         }
 
-                        while(rsf.next()) {
+                        if(rsf.next()) {
                             String linkf = rsf.getString("mv_link");
                             String mid_titlef = rsf.getString("mid_title");
                             String mvlkf = mid_titlef+"/"+linkf;

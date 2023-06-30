@@ -74,11 +74,11 @@ int randomNum = 0;
                 var myDiv = document.getElementById("uas").value;
                 var ky = <%=randomNum%>;
                 if(myDiv == ky){
-                    alert("인증성공");
+                    alert("인증완료");
                     k=1;
                     
                 }else{
-                    alert("인증실패");
+                    alert("인증번호가 올르 않습니다");
                 }          
             } 
             
@@ -87,10 +87,10 @@ int randomNum = 0;
                 var ph = document.getElementById("ph").value;
                 var link='info.jsp?k=1&nm='+nm+'&ph='+ph;
                 if(k==1){
-                    alert("성공");
+                   
                     location.replace(link);
                 }else{
-                    alert("인증번호가 올바르지 않습니다");           
+                    alert("인증이 처리되지 않았습니다");           
                 }             
             }
         </script>

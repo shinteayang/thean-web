@@ -5,90 +5,98 @@
 <%
     request.setCharacterEncoding("UTF-8");
 
-    String sql = "SELECT * FROM big_question";
+    String sql = "SELECT * FROM questions";
 
     Connection conn = Util.getConnection();
     PreparedStatement p1 = Prepare.getPrepare(conn, sql);
     ResultSet rs = p1.executeQuery();
-
-    int id = 0;
-    int big_id = 0;
 %>
 <link rel="stylesheet" href="../../../css/thean_academy/contact.css">
 <div class = "contact-container">
-    <div class = "chat-container">
+    <div class = "chat-container hidden">
+        <div class = "status-bar">
+            <div class = "exit" onClick = "exit()">✕</div>
+        </div>
         <div class = "chat-messages">
             <div class = "chat-message received">
-            <script>
-            var i=1;
-            
-            </script>
-            
-                <%
-
-                    while (rs.next()) {
-                        %>
-                            <div onClick = "" class = "msg" id = "div-<%=rs.getInt("id")%>">
-                                <input type="hidden" id = "id-<%=rs.getInt("id")%>" name = "id" value = "<%=rs.getInt("id")%>">
-                                <input type="hidden" id = "sec_id-<%=rs.getInt("big_id")%>" name = "sec_id" value = "<%=rs.getInt("big_id")%>">
-                                <div><%=rs.getString("question")%></div>
-                            </div>
-                        <%
-                    }
-                %>
+                궁금한 사항이 있으시면 챗봇을 통해 <br>물어보세요!
+            </div>
+        </div>
+        <div class = "btns">
+            <%
+                while (rs.next()) {
+                    %>
+                        <button onClick = "addChats(<%=rs.getInt("id")%>)" class = "q-btn">
+                            <%=rs.getString("question")%>
+                        </button>
+                    <%
+                }
+            %>
+        </div>
+    </div>
+    <div class = "kcon">
+        <div class = "kakao-con">
+            <div class = "kakao" onClick = "exit()"></div>
+            <div style = "margin-left: 14px;">
+                <div class = "k-title">궁금한건<br>채팅으로 문의해주세요</div>
             </div>
         </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
- var msg = null;
-    function addChats() {
-       
-         msg=document.querySelectorAll('.msg');
-        console.log(msg);
-     
- 
-    msg.forEach(function(div) {
-        div.addEventListener('click', function() {
-            console.log(div);
-            var id = this.querySelector('input[name="id"]').value;
-            var sec_id = this.querySelector('input[name="sec_id"]').value;
+    var chat = document.querySelector('.chat-messages');
+    var con = document.querySelector('.chat-container');
+    var icon = document.querySelector('.kcon');
 
-            $.ajax({
-                url: "addChat.jsp",
-                type: "GET",
-                data: {
-                    id: id,
-                    sec_id: sec_id
-                },
-                success: function(data) {
-                    $(".chat-messages").append(data);
-                   
-                    if(i==1){
-                    addChats();
-                    i++;
-                    console.log(i);
-                    }else{
-                    i--;
-                    console.log(i);
-                    }
-                 
-                    console.log(msg);
-                    
-                },
-                error: function(error) {
-                    console.log(error);
-                }
-            });
+    function addQuestion(id) {
+        $.ajax({
+            url: "addQuestion.jsp",
+            type: "GET",
+            data: {
+                id: id,
+            },
+            success: function(data) {
+                $(".chat-messages").append(data); 
+                chat.scrollTop = chat.scrollHeight;
+                console.log("sc");
+            },
+            error: function(xhr, status, error) {
+                console.log(xhr.responseText);
+                console.log(status);
+                console.log(error);
+                console.log("scz");
+            }
         });
-    });
-   console.log(msg);
     }
- 
-    addChats();
-    console.log(i);
-    
-   
-   
+
+    function addAnswer(id) {
+        $.ajax({
+            url: "addChat.jsp",
+            type: "GET",
+            data: {
+                id: id,
+            },
+            success: function(data) {
+                $(".chat-messages").append(data); 
+                chat.scrollTop = chat.scrollHeight;   
+                console.log("sc");               
+            },
+            error: function(error) {
+                console.log(error);
+                console.log("sc");
+                
+            }
+        });
+    }
+
+    function addChats(id) {
+        addQuestion(id);
+        addAnswer(id);
+    }
+
+    function exit() {
+        icon.classList.toggle('hidden');
+        con.classList.toggle('hidden');
+    }
 </script>

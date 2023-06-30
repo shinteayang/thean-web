@@ -1,0 +1,49 @@
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 40px;
+}
+
+th {
+    border-bottom: 2px solid #000;
+}
+
+td {
+    border-bottom: 1px solid #bbb;
+    text-align: center;
+}
+
+.img {
+    width: 300px;
+}
+
+textarea {
+    width: 300px;
+    height: 80px;
+    resize: none;
+}
+
+.sub-title {
+    font-size: 24px;
+    font-family: 'B';
+    margin: 24px 0 24px 0;
+}
+
+.e-title {
+    font-size: 20px;
+    font-family: 'B';
+}
+
+.element {
+    margin-bottom: 24px;
+}
+
+.search-btn {
+    width: 60px;
+    height: 30px;
+    background: #000;
+    border: none;
+    color: #fff;
+}

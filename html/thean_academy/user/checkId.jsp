@@ -5,7 +5,7 @@
 <%@ page import="java.io.*"%>
 
 <% 
-    String variablePath = "/opt/tomcat/webapps/ROOT/WEB-INF/keys/key.sh";
+    String variablePath = "/var/lib/tomcat9/webapps/ROOT/WEB-INF/keys/key.sh";
     String variableName = "KEY";
     String variableValue = "";
 

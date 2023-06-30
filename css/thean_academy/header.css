@@ -36,30 +36,29 @@
 
 .header-container a {
     font-family: 'M';
-    font-size: 18px;
     text-decoration: none;
     color: black;
 }
 
 .logo-form {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     align-items: center;
 }
 
 .header {
     display: flex;
-    gap: 60px;
+    gap: 40px;
     justify-content: space-between;
     align-items: center;
 }
 
 .header a {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .logo {
-    width: 40px;
+    height: 36px;
 }
 
 #sidebar {
@@ -102,7 +101,7 @@
 #sidebar-toggle {
     border: none;
     background-color: white;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .profile-container {

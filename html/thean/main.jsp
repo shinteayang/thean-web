@@ -30,7 +30,9 @@
     
                         while(rs.next()){
                             %>
-                                <div class="slide" style = "background-image: url('../../upload_server/thean_resource/<%=rs.getString("img")%>');"></div>
+                                <div class="slide" style = "background-image: url('../../upload_server/thean_resource/<%=rs.getString("img")%>');">
+                                    <p class = "int">hello</p>
+                                </div>
                             <%
                         }
             }catch(Exception e){

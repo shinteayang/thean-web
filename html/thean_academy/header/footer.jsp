@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> 
-<style>  
+<style>
     #footer {
         background-color: #fff;
         width: 100%;
-        height: 180px;
+        height: 140px;
         z-index: 10001;
         position: absolute;
         border-top: 1px solid #ddd;
@@ -12,9 +12,10 @@
     .footer-wrap {
         width: 65vw;
         margin: 0 auto;
-        margin-top: 30px;
+        margin-top: 20px;
         display: flex;
-        gap: 60px;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .footer-logo {
@@ -27,17 +28,17 @@
     }
 
     p {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .aca-f {
         display: flex;
-        margin-top: 24px;
-        gap: 80px;
+        margin-top: 20px;
+        gap: 40px;
     }
 
     .agr p {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: bold;
     }
 
@@ -46,54 +47,58 @@
     }
 
     .icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 16px;
-        background-color: #244664;
         background-position: center center;
-        background-size: 65%;
         background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .icons {
         display: flex;
         gap: 20px;
-        margin-left: 242px;
+        align-items: center;
     }
 
     .youtube {
+        width: 36px;
+        height: 36px;
         background-image: url('../../../img/youtube.png');
     }
 
     .insta {
+        width: 30px;
+        height: 30px;
         background-image: url('../../../img/insta.png');
+    }
+
+    .footer-img {
+        width: 26%;
     }
 </style>
 <div id = "footer">
     <div class = "footer-wrap">
+    <div class = "aca-f">
         <div class = "logo-form" href="../index/main.jsp">
-            <img src="../../../mainlogo/thean-navy.png" alt="" class="logo">
-            <div class = "aca-title">
-                <div style = "font-size: 18px; font-family: 'B';">더안건축학원</div>
-                <div style = "font-size: 13px;">The-an Academy</div>
+            <img src="../../../img/thean_main.png" alt="" class="logo">
+            <%-- <div class = "aca-title">
+                <div style = "font-size: 14px; font-family: 'B';">더안건축학원</div>
+                <div style = "font-size: 10px;">The-an Academy</div>
+            </div> --%>
+        </div>
+            <img src="../../../img/footer.png" alt="" class = "footer-img">
+            <div class = "agr">
+                <p><a href="../index/policy.jsp">이용약관</a></p>
+                <p><a href="../index/privacy.jsp">개인정보처리방침</a></p>
             </div>
         </div>
-        <div>
-            <div class = "aca-f">
-                <div>
-                    <p>더안건축학원&nbsp;&nbsp;|&nbsp;&nbsp;대표 안용진&nbsp;&nbsp;|&nbsp;&nbsp;서울시 강북구 도봉로 100, 4층</p>
-                    <p>사업자번호: 305-95-37596&nbsp;&nbsp;|&nbsp;개인정보책임자: 신태양</p>
-                    <p>통신판매번호: 2023-서울강북-0562</p>
-                </div>
-                <div class = "agr">
-                    <p><a href="../index/policy.jsp">이용약관</a></p>
-                    <p><a href="../index/privacy.jsp">개인정보처리방침</a></p>
-                </div>
-                <div class = "icons">
-                    <div class = "icon youtube" OnClick="window.open('www.google.com')"></div>
-                    <div class = "icon insta" OnClick="window.open('www.google.com')"></div>
-                </div>
+            <%-- <div>
+                <p>더안건축학원&nbsp;&nbsp;|&nbsp;&nbsp;대표 안용진&nbsp;&nbsp;|&nbsp;&nbsp;서울시 강북구 도봉로 100, 4층</p>
+                <p>사업자번호: 305-95-37596&nbsp;&nbsp;|&nbsp;개인정보책임자: 신태양</p>
+                <p>통신판매번호: 2023-서울강북-0562</p>
+            </div> --%>
+            <div class = "icons">
+                <div class = "icon youtube" OnClick="window.open('https://www.youtube.com/@user-gx3iy2uv5x')"></div>
+                <div class = "icon insta" OnClick="window.open('https://instagram.com/architecture_the_an?igshid=MzRlODBiNWFlZA==')"></div>
+                <jsp:include page="../contact/contact.jsp"></jsp:include>
             </div>
-        </div>
     </div>
 </div>

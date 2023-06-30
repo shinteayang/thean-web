@@ -1,0 +1,48 @@
+.search {
+    width: 300px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #bbb;
+}
+
+.search-btn {
+    width: 60px;
+    height: 30px;
+    background: #000;
+    border: none;
+    color: #fff;
+}
+
+#table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 40px;
+}
+
+th {
+    border-bottom: 2px solid #000;
+}
+
+td {
+    border-bottom: 1px solid #bbb;
+    text-align: center;
+}
+
+textarea {
+    width: 110px;
+    height: 80px;
+    resize: none;
+}
+
+.e-title {
+    font-size: 20px;
+    font-family: 'B';
+}
+
+.info-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

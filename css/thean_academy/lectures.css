@@ -167,6 +167,7 @@ input[type="radio"]:checked {
 .difficulty-info {
     color: #fff;
     padding: 0.8vw;
+    font-size: 12px;
 }
 
 .price-info {
@@ -174,12 +175,13 @@ input[type="radio"]:checked {
 }
 
 .designer {
-    font-size: 1vw;
+    font-size: 14px;
     color: #fff;
 }
 
 .price {
     color: #fff;
+    font-size: 12px;
 }
 
 .day {
@@ -195,7 +197,7 @@ input[type="radio"]:checked {
 
 .title {
     color: #fff;
-    font-size: 1.6vw;
+    font-size: 24px;
     margin: 0 auto;
     width: 84%;
     text-align: center;

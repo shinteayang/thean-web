@@ -262,7 +262,6 @@
 		</script>
 	</div>
 	</div>
-    <jsp:include page="../contact/contact.jsp"></jsp:include>
 	<jsp:include page="../header/footer.jsp"></jsp:include>
 </body>
 </html>
