@@ -98,7 +98,6 @@
             <div class = "icons">
                 <div class = "icon youtube" OnClick="window.open('https://www.youtube.com/@user-gx3iy2uv5x')"></div>
                 <div class = "icon insta" OnClick="window.open('https://instagram.com/architecture_the_an?igshid=MzRlODBiNWFlZA==')"></div>
-                <jsp:include page="../contact/contact.jsp"></jsp:include>
             </div>
     </div>
 </div>

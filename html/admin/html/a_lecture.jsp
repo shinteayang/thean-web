@@ -20,6 +20,9 @@
             <div class="main-container">
                 <div class = "main-elements">
                     <div class="main-title">강의 관리</div>
+                    <table id = "table">
+                        
+                    </table>
                 </div>
             </div>
         </div>

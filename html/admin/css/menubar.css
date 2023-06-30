@@ -1,5 +1,9 @@
+* {
+    font-family: 'M';
+}
+
 .menu-container {
-    width: 15%;
+    width: 200px;
     height: 100vh;
     position: fixed;
     background: #ffffff;
@@ -32,4 +36,8 @@
 
 .hidden {
     display: none;
+}
+
+.m {
+    font-family: 'M';
 }

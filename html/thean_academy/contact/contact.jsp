@@ -51,7 +51,7 @@
 
     function addQuestion(id) {
         $.ajax({
-            url: "addQuestion.jsp",
+            url: "https://thean-ac.com/source/html/thean_academy/index/addQuestion.jsp",
             type: "GET",
             data: {
                 id: id,
@@ -72,7 +72,7 @@
 
     function addAnswer(id) {
         $.ajax({
-            url: "addChat.jsp",
+            url: "https://thean-ac.com/source/html/thean_academy/index/addChat.jsp",
             type: "GET",
             data: {
                 id: id,

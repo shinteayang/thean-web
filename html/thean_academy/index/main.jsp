@@ -12,17 +12,17 @@
 
 
 	String ip = request.getHeader("x-forwarded-for");
-	 if (ip == null || ip.length() == 0) {
-	        ip = request.getHeader("Proxy-Client-IP");
-	    }
-	 
-	    if (ip == null || ip.length() == 0) {
-	        ip = request.getHeader("WL-Proxy-Client-IP");  // 웹로직
-	    }
-	 
-	    if (ip == null || ip.length() == 0) {
-	        ip = request.getRemoteAddr() ;
-	    }
+    if (ip == null || ip.length() == 0) {
+        ip = request.getHeader("Proxy-Client-IP");
+    }
+
+    if (ip == null || ip.length() == 0) {
+        ip = request.getHeader("WL-Proxy-Client-IP");  // 웹로직
+    }
+
+    if (ip == null || ip.length() == 0) {
+        ip = request.getRemoteAddr() ;
+    }
 	Date now = new Date();
 	SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd:hh:mm:ss");
     String lid = "";
@@ -263,5 +263,6 @@
 	</div>
 	</div>
 	<jsp:include page="../header/footer.jsp"></jsp:include>
+    <jsp:include page="../contact/contact.jsp"></jsp:include>
 </body>
 </html>

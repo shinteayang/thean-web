@@ -239,8 +239,8 @@
             </div>
             <a class = "back-btn" href="eduWrite.jsp?te=<%=te%>">작성하기</a>
         </div>
-        <jsp:include page="../contact/contact.jsp"></jsp:include>
         <jsp:include page="../header/footer.jsp"></jsp:include>
+        <jsp:include page="../contact/contact.jsp"></jsp:include>
     </body>
     <script>
         const form = document.getElementById("searchForm");

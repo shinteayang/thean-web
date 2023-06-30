@@ -20,6 +20,42 @@
             <div class="main-container">
                 <div class = "main-elements">
                     <div class="main-title">학습지원 관리</div>
+                    <table id = "table">
+                        <tr>
+                            <th style = "width: 10%;">번호</th>
+                            <th style = "width: 55%;">제목</th>
+                            <th style = "width: 10%;">강사</th>
+                            <th style = "width: 10%;">날짜</th>
+                            <th style = "width: 15%;">기능</th>
+                        </tr>
+                        <form action="">
+                            <tr>
+                                <td>1</td>
+                                <td style = "text-align: left;">강의에 대한 질문</td>
+                                <td>안용진</td>
+                                <td>20230630</td>
+                                <td>삭제 / <a href="edu_answer.jsp">답변</a></td>
+                            </tr>
+                        </form>
+                        <form action="">
+                            <tr>
+                                <td>1</td>
+                                <td style = "text-align: left;">강의에 대한 질문</td>
+                                <td>안용진</td>
+                                <td>20230630</td>
+                                <td>삭제 / 답변</td>
+                            </tr>
+                        </form>
+                        <form action="">
+                            <tr>
+                                <td>1</td>
+                                <td style = "text-align: left;">강의에 대한 질문</td>
+                                <td>안용진</td>
+                                <td>20230630</td>
+                                <td>삭제 / 답변</td>
+                            </tr>
+                        </form>
+                    </table>
                 </div>
             </div>
         </div>

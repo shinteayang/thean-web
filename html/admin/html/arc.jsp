@@ -54,7 +54,7 @@
                                 <th>기타</th>
                                 <th>기능</th>
                             </tr>
-                           <%
+                            <%
                                 String select = request.getParameter("select");
                                 String search = request.getParameter("search");
                                 String sqla="";
