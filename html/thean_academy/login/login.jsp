@@ -38,7 +38,7 @@
                         }
                     %>
                     <div class="register">
-                        계정이 아직 없으십니까? <br><a href="../user/agreement.jsp">회원가입</a>하기
+                        계정이 아직 없으십니까? <br><a href="../user/choose.jsp">회원가입</a>하기
                     </div>
                 </div>
             </form>

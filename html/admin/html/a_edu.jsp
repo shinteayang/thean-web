@@ -31,7 +31,7 @@
                         <form action="">
                             <tr>
                                 <td>1</td>
-                                <td style = "text-align: left;">강의에 대한 질문</td>
+                                <td style = "text-align: left;"><a href = "edu.jsp">강의에 대한 질문</a></td>
                                 <td>안용진</td>
                                 <td>20230630</td>
                                 <td>삭제 / <a href="edu_answer.jsp">답변</a></td>

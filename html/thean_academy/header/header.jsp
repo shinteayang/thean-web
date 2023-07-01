@@ -23,7 +23,7 @@
             <div style = "font-size: 16px;">
                 <%
                     if(session == null || session.getAttribute("name")==null) {
-                        %><a href="../login/login.jsp?id=1">Login</a> / <a href="../user/agreement.jsp">Join</a><%
+                        %><a href="../login/login.jsp?id=1">Login</a> / <a href="../user/choose.jsp">Join</a><%
                     } else {
                         Object name = session.getAttribute("name");
                         Object op = session.getAttribute("op");

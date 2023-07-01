@@ -6,10 +6,6 @@
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="javax.servlet.*" %>
-<%
-    request.setCharacterEncoding("UTF-8");
-    int cnt = Integer.parseInt(request.getParameter("cnt"));
-%>
 <!doctype html>
     <html lang="ko">
     <head>
@@ -18,6 +14,28 @@
         <title>더안건축-관리자</title>
         <link rel="stylesheet" href="../css/arc.css" />
         <link rel="stylesheet" href="../css/co.css" />
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.add').click(function() {
+                    $.ajax({
+                        url: 'add_photo.jsp',
+                        method: 'GET',
+                        success: function(response) {
+                            $('.photo-elements').append(response);
+                        },
+                        error: function() {
+                            alert('목차를 추가하는 데 실패했습니다.');
+                        }
+                    });
+                });
+
+                $(document).on('click', '.close', function() {
+                    var idx = $(this).closest('.photo-element');
+                    idx.remove();
+                });
+            });
+        </script>
     </head>
     <body>
         <div class = "body">
@@ -60,14 +78,16 @@
                                     <div class = "e-title">기타</div>
                                     <textarea style = "width: 200px;" name = "etc"></textarea>
                                 </div>
-                                <div class = "element">
-                                    <div class = "e-title">사진</div>
-                                    <%
-                                        for (int i = 0; i < cnt; i++) {
-                                            %><input type = "file" name = "file"><%
-                                        }
-                                    %>
+                            </div>
+                            <div class = "container">
+                                <div class = "e-title">사진</div>
+                                <div class = "photo-elements">
+                                    <div class = "photo-element">
+                                        <input type="file">
+                                        <div class = "close">✕</div>
+                                    </div>
                                 </div>
+                                <div class = "add">+ 사진 추가</div>
                             </div>
                         </div>
                         <div class = "btns">

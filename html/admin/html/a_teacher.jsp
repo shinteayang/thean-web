@@ -20,40 +20,38 @@
             <div class="main-container">
                 <div class = "main-elements">
                     <div class="main-title">강사 관리</div>
-                    <table id = "table">
-                        <tr>
-                            <th style = "width: 15%;">이름</th>
-                            <th style = "width: 30%;">아이디</th>
-                            <th style = "width: 25%;">휴대폰번호</th>
-                            <th style = "width: 25%;">이메일</th>
-                            <th style = "width: 15%;">기능</th>
-                        </tr>
+                    <div class="main-element">
                         <form action="">
-                            <tr>
-                                <td>1</td>
-                                <td style = "text-align: left;">강의에 대한 질문</td>
-                                <td>20230630</td>
-                                <td><a>삭제</a> / <a href="contact_answer.jsp">답변</a></td>
-                                <td></td>
-                            </tr>
+                            <input type="text" class = "search" placeholder = "검색어 입력" name="search">
+                            <button class = "search-btn" type = "submit">검색</button>
                         </form>
-                        <form action="">
+                        <table id = "table">
                             <tr>
-                                <td>1</td>
-                                <td style = "text-align: left;">강의에 대한 질문</td>
-                                <td>20230630</td>
-                                <td><a>삭제</a> / <a href="contact_answer.jsp">답변</a></td>
+                                <th style = "width: 10%;">이름</th>
+                                <th style = "width: 30%;">아이디</th>
+                                <th style = "width: 20%;">휴대폰번호</th>
+                                <th style = "width: 20%;">이메일</th>
+                                <th style = "width: 20%;">기능</th>
                             </tr>
-                        </form>
-                        <form action="">
-                            <tr>
-                                <td>1</td>
-                                <td style = "text-align: left;">강의에 대한 질문</td>
-                                <td>20230630</td>
-                                <td><a>삭제</a> / <a href="contact_answer.jsp">답변</a></td>
-                            </tr>
-                        </form>
-                    </table>
+                            <form action="">
+                                <tr>
+                                    <td>안용진</td>
+                                    <td style = "text-align: left;">dksdydwls</td>
+                                    <td>01012345678</td>
+                                    <td>dksdydwls@gmail.com</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">등급 선택</option>
+                                            <option value="member">회원</option>
+                                            <option value="teacher">강사</option>
+                                            <option value="admin">관리자</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </form>
+                        </table>
+                    </div>
+                    <button class = "search-btn" onClick = "location.href='add_teacher.jsp'">강사등록</button>
                 </div>
             </div>
         </div>

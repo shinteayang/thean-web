@@ -167,4 +167,30 @@ body {
 	width: 60%;
 }
 
+#explan {
+    margin-top: 20px;
+}
 
+.choose {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.member {
+    text-align: center;
+    border: 2px solid #bbb;
+    border-radius: 20px;
+    width: 180px;
+    height: 150px;
+    padding-top: 20px;
+}
+
+.mb-ico {
+    width: 80px;
+}
+
+.who {
+    font-size: 20px;
+    font-family: 'B';
+}

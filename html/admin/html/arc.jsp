@@ -36,10 +36,7 @@
                                 </form>
                             </div>
                             <div>
-                                <form action="add_arc.jsp">
-                                    <input type="text" placeholder = "사진 갯수 입력" name = "cnt">
-                                    <button type = "submit" class = "search-btn">추가</button>
-                                </form>
+                                <button type = "button" class = "search-btn" onClick = "location.href='add_arc.jsp'">추가</button>
                             </div>
                         </div>
                         <table id = "table">

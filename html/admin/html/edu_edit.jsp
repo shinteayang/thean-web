@@ -24,7 +24,7 @@
             <jsp:include page="menubar.jsp"></jsp:include>
             <div class="main-container">
                 <div class = "main-elements">
-                    <div class="main-title">학습지원 답변 작성</div>
+                    <div class="main-title">학습지원 답변 수정</div>
                     <form action="" name = "form">
                         <input type="text" id = "title" placeholder = "제목을 입력하세요">
                         <textarea id = "summernote" name="content"></textarea>

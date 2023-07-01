@@ -60,7 +60,7 @@
 				<div class="term-title">
 					<h3>이용약관</h3>
 				</div>
-				<textarea class="term-box">
+				<textarea class="term-box" readonly>
 ■ 더안건축학원 이용약관
  
 
@@ -387,7 +387,7 @@
 				<div class="term-title">
 					<h3>개인정보취급방침</h3>
 				</div>
-				<textarea class="term-box">
+				<textarea class="term-box" readonly>
 ■ 더안건축학원 개인정보처리방침
   더안건축학원(‘http://www.thean-ac.com' 이하 회사‘)은 개인정보보호법 제30조에 따라 정보주체의 개인정보를 보호하고 
   이와 관련된 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보처리방침을 수립·공개합니다.

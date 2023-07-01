@@ -40,6 +40,7 @@
                             </tr>
                         </form>
                     </table>
+                    <button class = "search-btn" onClick = "location.href='add_notice.jsp'">공지사항 작성</button>
                 </div>
             </div>
         </div>

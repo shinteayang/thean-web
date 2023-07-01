@@ -28,7 +28,8 @@
                     <form action="" name = "form">
                         <input type="text" id = "title" placeholder = "제목을 입력하세요">
                         <textarea id = "summernote" name="content"></textarea>
-                        <button type = "submit" class = "sub-btn">완료</button>
+                        <button type = "submit" class = "search-btn">완료</button>
+                        <button type = "button" class = "search-btn" onClick = "history.go(-1);">취소</button>
                     </form>
                 </div>
             </div>

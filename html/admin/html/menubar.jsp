@@ -17,6 +17,7 @@
                 <a class = "m"  href="a_lecture.jsp">강의 관리</a>
                 <a class = "m"  href="a_profit.jsp">수익 관리</a>
                 <a class = "m"  href="a_teacher.jsp">강사 관리</a>
+                <a class = "m"  href="coupon.jsp">할인 쿠폰 관리</a>
             </div>
             <a class = "m"  onClick = "togle(arc);" style = "font-family: 'B';">더안건축</a>
             <div class = "board arc">

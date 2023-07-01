@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>더안건축-관리자</title>
-        <link rel="stylesheet" href="../css/slide.css" />
+        <link rel="stylesheet" href="../css/profit.css" />
         <link rel="stylesheet" href="../css/co.css" />
     </head>
     <body>
@@ -19,7 +19,7 @@
             <jsp:include page="menubar.jsp"></jsp:include>
             <div class="main-container">
                 <div class = "main-elements">
-                    <div class="main-title">슬라이드 관리</div>
+                    <div class="main-title">제휴 쿠폰 관리</div>
                 </div>
             </div>
         </div>
