@@ -70,17 +70,6 @@ Connection conn = null;
             </div>
             <div class = "img-element">
 
-
-
-
-
-
-
-
-
-
-
-
 <%
                         }
 
@@ -92,7 +81,7 @@ Connection conn = null;
 
                         while(rs.next()){
                             %>
-                            <img src="../../upload_server/thean_resource/<%=rs.getString("ph")%>" class = "arc-img" alt="">
+                            <img src="../../upload_server/thean_resource/arcph/<%=rs.getString("ph")%>" class = "arc-img" alt="">
                             
                             
                             

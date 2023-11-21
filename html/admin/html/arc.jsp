@@ -82,15 +82,18 @@
 
                                 while(rs.next()) { 
                                         %><tr>
-                                <td><textarea type="text"><%=rs.getString("nm")%></textarea></td>
-                                <td><textarea type="text"><%=rs.getString("work")%></textarea></td>
-                                <td><textarea type="text"><%=rs.getString("gps")%></textarea></td>
-                                <td><textarea type="text"><%=rs.getString("ground")%></textarea></td>
-                                <td><textarea type="text"><%=rs.getString("grow")%></textarea></td>
-                                <td><textarea type="text"><%=rs.getString("design")%></textarea></td>
-                                <td><textarea type="text"><%=rs.getString("photo")%></textarea></td>
-                                <td><textarea type="text"><%=rs.getString("etc")%></textarea></td>
-                                <td><b>수정</b>/<b>삭제</b></td>
+                                        <form action="arc_update.jsp">
+                                <td><textarea type="text" name="nm"><%=rs.getString("nm")%></textarea></td>
+                                <td><textarea type="text" name="work"><%=rs.getString("work")%></textarea></td>
+                                <td><textarea type="text" name="gps"><%=rs.getString("gps")%></textarea></td>
+                                <td><textarea type="text" name="ground"><%=rs.getString("ground")%></textarea></td>
+                                <td><textarea type="text" name="grow"><%=rs.getString("grow")%></textarea></td>
+                                <td><textarea type="text" name="design"><%=rs.getString("design")%></textarea></td>
+                                <td><textarea type="text" name="photo"><%=rs.getString("photo")%></textarea></td>
+                                <td><textarea type="text" name="etc"><%=rs.getString("etc")%></textarea></td>
+                                <input type="text" name="id" value="<%=rs.getString("id")%>" hidden>
+                                <td><b> <button type="submit">수정</button></b>/<b> <a href="arc_drop.jsp?id=<%=rs.getString("id")%>&nm=<%=rs.getString("nm")%>&gps=<%=rs.getString("gps")%>">삭제</a></b></td>
+                                </form>
                             </tr><%
                                     }     
                                 } catch(Exception e) { 

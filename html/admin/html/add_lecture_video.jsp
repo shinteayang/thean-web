@@ -129,6 +129,37 @@
                                     <textarea name="recom" id = "summernote2"></textarea>
                                 </div>
                             </div>
+                            <script>
+                                var index_cnt = 0;
+                                var video_cnt = 0;
+                            </script>
+                            <div class="add-element">
+                                <div class = "l-title">강의 등록</div>
+                                <div>
+                                    <div class = "index-elements">
+                                        <div class="index-element">
+                                            <div class = "exit">✕</div>
+                                            <div class = "index-wrap">
+                                                <input type="text" id = "title" name = "index-title" placeholder = "목차를 입력하세요">
+                                                <div class = "video-title">영상 목록</div>
+                                                <div class = "video-elements">
+                                                    <div class = "video-element">
+                                                        <div class = "video-wrap">
+                                                            <div style = "display: flex; width: 100%;">
+                                                                <input id = "video" type="text" name = "video-title" placeholder = "영상 제목을 입력하세요">
+                                                                <input type="file">
+                                                            </div>
+                                                            <div class = "close-vd">✕</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class = "add-index video">+ 영상 추가</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "add-index index">+ 목차 추가</div>
+                                </div>
+                            </div>
                         </div>
                         <div>
                             <button type = "submit" class = "search-btn">완료</button>

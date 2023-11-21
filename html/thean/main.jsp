@@ -65,7 +65,7 @@
                                         <div class = "thumb-title"><%=rs.getString("nm")%></div>
                                         <div class = "thumb-year"><%=rs.getString("year")%></div>
                                     </a>
-                                    <div class = "thumb" style = "background-image: url('../../upload_server/thean_resource/<%=rs.getString("phm")%>');"></div>
+                                    <div class = "thumb" style = "background-image: url('../../upload_server/thean_resource/arcph/<%=rs.getString("phm")%>');"></div>
                                 </div>      
                             <%
                         }
@@ -91,7 +91,7 @@
                                 <div class = "thumb-title"><%=rs.getString("nm")%></div>
                                 <div class = "thumb-year"><%=rs.getString("year")%></div>
                             </a>
-                             <div class = "thumb" style = "background-image: url('../../upload_server/thean_resource/<%=rs.getString("phm")%>');"></div>
+                             <div class = "thumb" style = "background-image: url('../../upload_server/thean_resource/arcph/<%=rs.getString("phm")%>');"></div>
                         </div>      
                             
                             
@@ -128,7 +128,7 @@
                                 <div class = "thumb-title"><%=rs.getString("nm")%></div>
                                 <div class = "thumb-year"><%=rs.getString("year")%></div>
                             </a>
-                             <div class = "thumb" style = "background-image: url('../../upload_server/thean_resource/<%=rs.getString("phm")%>');"></div>
+                             <div class = "thumb" style = "background-image: url('../../upload_server/thean_resource/arcph/<%=rs.getString("phm")%>');"></div>
                         </div>        
                             <%
                         }

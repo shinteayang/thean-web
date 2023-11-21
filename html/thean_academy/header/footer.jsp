@@ -84,7 +84,8 @@
                 <div style = "font-size: 10px;">The-an Academy</div>
             </div> --%>
         </div>
-            <img src="../../../img/footer.png" alt="" class = "footer-img">
+            <img src="../../../img/footer.jpg" alt="" class = "footer-img">
+         
             <div class = "agr">
                 <p><a href="../index/policy.jsp">이용약관</a></p>
                 <p><a href="../index/privacy.jsp">개인정보처리방침</a></p>

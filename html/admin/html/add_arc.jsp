@@ -16,11 +16,16 @@
         <link rel="stylesheet" href="../css/co.css" />
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script>
+            var count = 1;
             $(document).ready(function() {
                 $('.add').click(function() {
+                    ++count;
                     $.ajax({
                         url: 'add_photo.jsp',
-                        method: 'GET',
+                        method: 'POST',
+                        data: {
+                            count: count
+                        },
                         success: function(response) {
                             $('.photo-elements').append(response);
                         },
@@ -43,7 +48,7 @@
             <div class="main-container">
                 <div class = "main-elements">
                     <div class="main-title">건축 사진 추가</div>
-                    <form action="">
+                    <form action="upload_arc.jsp" method="post" enctype="multipart/form-data">
                         <div class="main-element">
                             <div class = "info-form">
                                 <div class = "element">
@@ -78,12 +83,26 @@
                                     <div class = "e-title">기타</div>
                                     <textarea style = "width: 200px;" name = "etc"></textarea>
                                 </div>
+                                <div class = "element">
+                                    <div class = "e-title">카테고리</div>
+                                    <select name = "cate">
+                                        <option value = "">카테고리 선택</option>
+                                        <option value = "설계">설계</option>
+                                        <option value = "실측">실측</option>
+                                        <option value = "준공">준공</option>
+                                    </select>
+                                </div>
+                                <div class = "element">
+                                    <div class = "e-title">연도</div>
+                                    <input type = "text" name = "year">
+                                </div>
                             </div>
                             <div class = "container">
                                 <div class = "e-title">사진</div>
                                 <div class = "photo-elements">
                                     <div class = "photo-element">
-                                        <input type="file">
+                                        <input type="file" name="file1" id = "file1">
+                                        
                                         <div class = "close">✕</div>
                                     </div>
                                 </div>
@@ -91,8 +110,8 @@
                             </div>
                         </div>
                         <div class = "btns">
-                            <button type = "submit" class = "search-btn">확인</button>
-                            <button type = "button" onClick = "history.go(-1);" class = "search-btn">취소</button>
+                            <input type = "submit" class = "search-btn">
+                        
                         </div>
                     </form>
                 </div>
