@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.io.*, java.util.*"%>
 <%@ page import="com.oreilly.servlet.MultipartRequest"%>
-<%@ page import="DBPKG.UtilArc"%>
+<%@ page import="DBPKG.Util"%>
 <%@ page import="DBPKG.Prepare"%>
 <%@ page import="java.sql.*"%>
 
 <%
     request.setCharacterEncoding("UTF-8");
-    String uploadPath = "/var/lib/tomcat9/webapps/ROOT/source/upload_server/thean_resource/arcph"; // 업로드할 폴더 경로
+    String uploadPath = "/var/lib/tomcat9/webapps/ROOT/source/upload_server/"; // 업로드할 폴더 경로
     List<String> uploadedFileNames = new ArrayList<>();
 
     MultipartRequest multipartRequest = new MultipartRequest(
@@ -31,49 +31,34 @@
     Collections.reverse(uploadedFileNames);
 
     String title = multipartRequest.getParameter("title");
+    int day = Integer.parseInt(multipartRequest.getParameter("day"));
+    int price = Integer.parseInt(multipartRequest.getParameter("price"));
     String category = multipartRequest.getParameter("category");
-    String teacher = multipartRequest.getParameter("loc");
-    int rev = Integer.parseInt(multipartRequest.getParameter("rev"));
+    String teacher = multipartRequest.getParameter("teacher");
     String intro = multipartRequest.getParameter("intro");
-    int difficulty = multipartRequest.getParameter("difficulty");
-    String rec = multipartRequest.getParameter("rec");
-    String etc = multipartRequest.getParameter("etc");
-    String cate = multipartRequest.getParameter("cate");
-    String year = multipartRequest.getParameter("year");
-    int max_id = 0;
+    int difficulty = Integer.parseInt(multipartRequest.getParameter("difficulty"));
+    String recom = multipartRequest.getParameter("recom");
 
-    Connection conn = UtilArc.getConnection();
-    PreparedStatement ps = conn.prepareStatement("insert into CATE (categoryname, day, price, te_name, ct_info, th_cat, img, niz, te_no, cover, free, file, diffcult, diffculty) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    PreparedStatement ps1 = conn.prepareStatement("select max(categorynum) as cnum from CATE");
-    PreparedStatement ps2 = conn.prepareStatement("insert into arcph (id, num, ph) values (?, ?, ?)");
+    Connection conn = Util.getConnection();
+    PreparedStatement ps = conn.prepareStatement("insert into CATE (categoryname, day, price, te_name, ct_info, th_cat, img, niz, te_no, cover, free, file, diffculty) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     String[] uploadedFileNamesArray = uploadedFileNames.toArray(new String[0]);
 
-    ps.setString(1, name);
-    ps.setString(2, usage);
-    ps.setString(3, loc);
-    ps.setString(4, land);
-    ps.setString(5, total);
-    ps.setString(6, des);
-    ps.setString(7, rec);
-    ps.setString(8, etc);
-    ps.setString(9, uploadedFileNamesArray[0]);
-    ps.setString(10, cate);
-    ps.setString(11, year);
+    ps.setString(1, title);
+    ps.setInt(2, day);
+    ps.setInt(3, price);
+    ps.setString(4, teacher);
+    ps.setString(5, intro);
+    ps.setString(6, category);
+    ps.setString(7, uploadedFileNamesArray[0]);
+    ps.setString(8, recom);
+    ps.setInt(9, 22);
+    ps.setString(10, uploadedFileNamesArray[2]);
+    ps.setString(11, uploadedFileNamesArray[3]);
+    ps.setString(12, uploadedFileNamesArray[4]);
+    ps.setInt(13, difficulty);
 
     ps.executeUpdate();
-
-    ResultSet rs = ps1.executeQuery();
-
-    if(rs.next()) {max_id = rs.getInt("max_id");}
-
-    for (String fn : uploadedFileNamesArray) {
-        ps2.setInt(1, max_id);
-        ps2.setInt(2, 6);
-        ps2.setString(3, fn);
-
-        ps2.executeUpdate();
-    }
     
-    response.sendRedirect("add_lecture.jsp");
+    response.sendRedirect("a_lecture.jsp");
 %>

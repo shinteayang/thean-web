@@ -16,7 +16,7 @@
                 </div>
                 <a class = "m" href="a_lecture.jsp">강의 관리</a>
                 <a class = "m" href="a_video.jsp">영상 관리</a>
-                <a class = "m" href="a_profit.jsp">수익 관리</a>
+                <a class = "m" href="a_profit.jsp?year=2023&month=1&teacher=안용진">정산 관리</a>
                 <a class = "m" href="a_teacher.jsp">강사 관리</a>
                 <a class = "m" href="coupon.jsp">할인 쿠폰 관리</a>
             </div>

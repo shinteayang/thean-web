@@ -5,6 +5,23 @@
 <%@ page import="DBPKG.Key"%>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
+<%
+    int id = Integer.parseInt(request.getParameter("id"));
+    String title = null;
+    Connection conn = null;
+    conn = Util.getConnection();
+
+    String sql = "SELECT categoryname FROM CATE where categorynum=" + id;
+    String sql2 = "SELECT mid_title as title, id FROM mid_title WHERE ctnum=" + id;
+
+    PreparedStatement ps = conn.prepareStatement(sql);
+    PreparedStatement ps2 = conn.prepareStatement(sql2);
+
+    ResultSet rs = ps.executeQuery();
+    if (rs.next()) {
+        title = rs.getString("categoryname");
+    }
+%>
 <!doctype html>
     <html lang="ko">
     <head>
@@ -19,26 +36,27 @@
             <jsp:include page="menubar.jsp"></jsp:include>
             <div class="main-container">
                 <div class = "main-elements">
-                    <div class="main-title">영상 관리</div>
+                    <div class="main-title"><%=title%></div>
                     <table id = "table">
                         <tr>
-                            <th style = "width: 20%;">썸네일</th>
-                            <th style = "width: 30%;">카테고리</th>
-                            <th style = "width: 10%;">강사</th>
-                            <th style = "width: 20%;">가격</th>
+                            <th style = "width: 80%;">목차</th>
+                            <th style = "width: 20%;">기능</th>
                         </tr>
-                        <form action="">
+                        <%
+                            ResultSet rs2 = ps2.executeQuery();
+                            while(rs2.next()) {
+                        %>
                             <tr>
-                                <td><div class = "thumb" style = "background-image: url('');"></div></td>
-                                <td><a href="a_video_index.jsp">실사 도면 그리기</a></td>
-                                <td>안용진</td>
-                                <td>300,000원</td>
+                                <td><a href="a_video_list.jsp?id=<%=rs2.getString("id")%>&title=<%=rs2.getString("title")%>&ct=<%=id%>"><%=rs2.getString("title")%></a></td>
+                                <td><a href="a_delete_index.jsp?id=<%=rs2.getInt("id")%>">삭제</a></td>
                             </tr>
-                        </form>
+                        <%
+                            }
+                        %>
                     </table>
-                    <form action="add_lecture.jsp">
-                        <button class = "search-btn" type = "submit">강의 등록</button>
-                    </form>
+                    <div>
+                        <button class = "search-btn" type = "button" onClick = "location.href='add_index.jsp?id=<%=id%>'">목차 등록</button>
+                    </div>
                 </div>
             </div>
         </div>

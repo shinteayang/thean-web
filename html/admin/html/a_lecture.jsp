@@ -5,6 +5,14 @@
 <%@ page import="DBPKG.Key"%>
 <%@ page import="java.util.Date" %>
 <%@ page import="java.text.SimpleDateFormat" %>
+<%
+    Connection conn = null;
+    conn = Util.getConnection();
+    String sql = "SELECT categorynum, categoryname, day, te_name, format(price, 0) as f_price, th_cat, img, te_no FROM CATE";
+    String id = null;
+
+    PreparedStatement ps = conn.prepareStatement(sql);
+%>
 <!doctype html>
     <html lang="ko">
     <head>
@@ -23,20 +31,27 @@
                     <table id = "table">
                         <tr>
                             <th style = "width: 20%;">썸네일</th>
-                            <th style = "width: 30%;">카테고리</th>
+                            <th style = "width: 30%;">제목</th>
+                            <th style = "width: 10%;">카테고리</th>
                             <th style = "width: 10%;">강사</th>
                             <th style = "width: 20%;">가격</th>
-                            <th style = "width: 20%;">기능</th>
+                            <th style = "width: 10%;">기능</th>
                         </tr>
-                        <form action="">
+                        <%
+                            ResultSet rs = ps.executeQuery();
+                            while(rs.next()) {
+                        %>
                             <tr>
-                                <td><div class = "thumb" style = "background-image: url('');"></div></td>
-                                <td>실사 도면 그리기</td>
-                                <td>안용진</td>
-                                <td>300,000원</td>
-                                <td><a href = "lecture_edit.jsp">수정</a> / <a>삭제</a></td>
+                                <td><div class = "thumb" style = "background-image: url('../../../uploadimg/<%=rs.getString("img")%>');"></div></td>
+                                <td><a href="a_video_index.jsp?id=<%=rs.getInt("categorynum")%>"><%=rs.getString("categoryname")%></a></td>
+                                <td><%=rs.getString("th_cat")%></td>
+                                <td><%=rs.getString("te_name")%></td>
+                                <td><%=rs.getString("f_price")%>원</td>
+                                <td><a href="a_delete_lecture.jsp?id=<%=rs.getInt("categorynum")%>">삭제</a></td>
                             </tr>
-                        </form>
+                        <%
+                            }
+                        %>
                     </table>
                     <form action="add_lecture.jsp">
                         <button class = "search-btn" type = "submit">강의 등록</button>
@@ -46,3 +61,6 @@
         </div>
     </body>
 </html>
+<%
+    conn.close();
+%>

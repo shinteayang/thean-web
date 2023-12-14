@@ -15,7 +15,6 @@
     String free="";
     String ct_name = "";
     String name = "";
-    String ct_info = "";
     String title_m = "";
     String link = "";
     String mid_title = "";
@@ -236,7 +235,6 @@ try {
             if(rs.next()) {
                 name = rs.getString("mv_name");
                 ct_name = rs.getString("categoryname");
-                ct_info = rs.getString("mv_info");
                 title_m = rs.getString("mid_title");
                 link = rs.getString("mv_link");
                 mid_title = rs.getString("mid_title");

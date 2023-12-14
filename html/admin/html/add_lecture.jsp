@@ -65,7 +65,7 @@
             <div class="main-container">
                 <div class = "main-elements">
                     <div class="main-title">강의 등록</div>
-                    <form action="add_lec_action.jsp" name = "form">
+                    <form action="add_lec_action.jsp" name = "form" method = "post" enctype="multipart/form-data">
                         <input type="text" id = "title" name = "title" placeholder = "제목을 입력하세요">
                         <div class = "add-elements">
                             <div class = "add-element">
@@ -86,28 +86,52 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class = "add-element">
+                            <%-- <div class = "add-element">
                                 <div class = "l-title">수익 분류</div>
                                 <div>
                                     <input type="text" name="rev"> %
                                 </div>
-                            </div>
+                            </div> --%>
                             <div class="add-element">
                                 <div class = "l-title">강의 썸네일</div>
                                 <div>
-                                    <input type="file" name = "thumb">
+                                    <input type="file" name = "1thumb">
+                                </div>
+                            </div>
+                            <div class="add-element">
+                                <div class = "l-title">강의 커버</div>
+                                <div>
+                                    <input type="file" name = "2cover">
                                 </div>
                             </div>
                             <div class="add-element">
                                 <div class = "l-title">소개 영상</div>
                                 <div>
-                                    <input type="file" name = "intro">
+                                    <input type="file" name = "3intro">
+                                </div>
+                            </div>
+                            <div class="add-element">
+                                <div class = "l-title">가격</div>
+                                <div>
+                                    <input type="text" name = "price">(원)
+                                </div>
+                            </div>
+                            <div class="add-element">
+                                <div class = "l-title">잔여 기간</div>
+                                <div>
+                                    <input type="text" name = "day">(일)
                                 </div>
                             </div>
                             <div class="add-element">
                                 <div class = "l-title">강의 소개</div>
                                 <div>
-                                    <textarea name="intro" id = "summernote"></textarea>
+                                    <textarea name="intro" id = "summernote" type = "text"></textarea>
+                                </div>
+                            </div>
+                            <div class="add-element">
+                                <div class = "l-title">실습 파일</div>
+                                <div>
+                                    <input type="file" name = "4training">
                                 </div>
                             </div>
                             <div class="add-element">
@@ -126,7 +150,7 @@
                             <div class="add-element">
                                 <div class = "l-title">추천대상</div>
                                 <div>
-                                    <textarea name="recom" id = "summernote2"></textarea>
+                                    <textarea name="recom" id = "summernote2" type = "text"></textarea>
                                 </div>
                             </div>
                         </div>

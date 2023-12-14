@@ -243,7 +243,7 @@
                              <div class="menu-container">  
                                 <%
                                     try{       
-                                        PreparedStatement ps = conn.prepareStatement("select DISTINCT mid_title from MV where categorynum="+id);
+                                        PreparedStatement ps = conn.prepareStatement("select DISTINCT mid_title from mid_title where ctnum="+id);
                                         ResultSet rs = ps.executeQuery();
                                         
                                         int number = 0;

@@ -1,0 +1,27 @@
+.profit {
+    margin: 20px 0 20px 0;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 28px;
+}
+
+#year {
+    font-size: 1.1em;
+    margin: 20px 0 10px 0;
+}
+
+#month {
+    font-size: 1.1em;
+    margin: 10px 0 10px 0;
+}
+
+#teacher {
+    font-size: 1.1em;
+    margin: 10px 0 10px 0;
+}
+
+.profit-title {
+    font-size: 2em;
+    margin: 20px 0 20px 0;
+}
